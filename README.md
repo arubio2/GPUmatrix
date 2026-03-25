@@ -59,16 +59,14 @@ install_torch() # In some cases is required.
 
 -   **MUST INSTALL:**
 
-    -   CUDA Toolkit 11.7. Link
-        [here](https://docs.nvidia.com/cuda/archive/11.7.0/index.html).
-
-    -   cuDNN 8.4 . Link
-        [here](https://docs.nvidia.com/deeplearning/cudnn/archives/cudnn-840/install-guide/index.html).
+    -   Before installing torch is **required for GPU computing** to install CUDA and cuDNN. Links
+        for them and instructions for intallation are in the torch documentation.
 
 ### For Tensorflow: ([Link installation here](https://tensorflow.rstudio.com/install/))
 
 The installation of TensorFlow allows the selection to install the GPU,
-CPU, or both versions. This will depend on the version of TensorFlow
+CPU, or both versions (in Windows the GPU version is no longer supported).
+This will depend on the version of TensorFlow
 that we install with the `install_tensorflow()` function. The mode in
 which the tensors are created using GPUmatrix, if we choose to use
 TensorFlow, will depend on the installation mode. The options to switch
@@ -88,11 +86,8 @@ install_tensorflow(version = "nightly-gpu")
 
 -   **MUST INSTALL:**
 
-    -   CUDA Toolkit 11.2. Link
-        [here](https://developer.nvidia.com/cuda-11.3.0-download-archive).
-
-    -   cuDNN 8.1 . Link
-        [here](https://docs.nvidia.com/deeplearning/cudnn/archives/cudnn-840/install-guide/index.html).
+    -   Before installing tensorflow is **required for GPU computing** to install CUDA and cuDNN. Links
+        for them and instructions for intallation are in the tensorflow documentation.
 
 ## 0.2 GPUmatrix installation
 
@@ -108,7 +103,7 @@ Alternatively, it is possible to install the package from GitHub ot get
 the last version of the package.
 
 ``` r
-devtools::install_github(" ceslobfer/GPUmatrix")
+devtools::install_github("arubio2/GPUmatrix")
 ```
 
 # 1 Initialization GPUmatrix
