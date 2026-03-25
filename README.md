@@ -88,6 +88,9 @@ install_tensorflow(version = "nightly-gpu")
 
     -   Before installing tensorflow is **required for GPU computing** to install CUDA and cuDNN. Links
         for them and instructions for intallation are in the tensorflow documentation.
+### For Apple Silicon
+
+Great news! No additional software required to work on Apple Silicon (either the CPU or the GPU).
 
 ## 0.2 GPUmatrix installation
 
