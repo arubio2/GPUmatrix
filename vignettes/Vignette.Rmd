@@ -34,11 +34,22 @@ Before starting, please be advised that this R package is designed to have the l
 
 ## 0.1 Dependences
 
-GPUmatrix is an R package that utilizes tensors through the **torch** or **tensorflow** packages (see Advanced Users section for more information). One or the other must be installed for the use of GPUmatrix. Both packages are hosted in CRAN and have specific installation instructions. In both cases, it is necessary to have an NVIDIA® GPU card with the latest drivers installed in order to use the packages, as well as a version of Python 3. The NVIDIA card must be compatible; please see the list of capable cards [here](https://developer.nvidia.com/cuda/gpus#compute). If there is no compatible graphics card or not graphic card at all, you can still install tensorFlow and torch, but only with the CPU version, which means that GPUmatrix will only be able to run in CPU mode.
+GPUmatrix is an R package that utilizes tensors through the **torch** or
+**tensorflow** packages (see Advanced Users section for more
+information). One or the other must be installed for the use of
+GPUmatrix. Both packages are hosted in CRAN and have specific
+installation instructions. In both cases, it is necessary to have an
+NVIDIA® GPU card with the latest drivers installed in order to use the
+packages, as well as a version of Python 3. The NVIDIA card must be
+compatible; please see the list of capable cards
+[here](https://developer.nvidia.com/cuda-gpus#compute). If there is no
+compatible graphics card or not graphic card at all, you can still
+install tensorFlow and torch, but only with the CPU version, which means
+that GPUmatrix will only be able to run in CPU mode.
 
 ### For torch: ([Link installation here](https://torch.mlverse.org/docs/articles/installation.html))
 
-```{r,eval=F}
+``` r
 install.packages("torch")
 library(torch)
 install_torch() # In some cases is required.
@@ -46,17 +57,26 @@ install_torch() # In some cases is required.
 
 -   **MUST INSTALL:**
 
-    -   CUDA Toolkit 11.7. Link [here](https://docs.nvidia.com/cuda/archive/11.7.0/index.html).
-
-    -   cuDNN 8.4 . Link [here](hhttps://docs.nvidia.com/deeplearning/cudnn/backend/latest/reference/archives.html).
+    -   Before installing torch is **required for GPU computing** to install CUDA and cuDNN. Links
+        for them and instructions for intallation are in the torch documentation.
 
 ### For Tensorflow: ([Link installation here](https://tensorflow.rstudio.com/install/))
 
-The installation of TensorFlow allows the selection to install the GPU, CPU, or both versions. This will depend on the version of TensorFlow that we install with the `install_tensorflow()` function. The mode in which the tensors are created using GPUmatrix, if we choose to use TensorFlow, will depend on the installation mode. The options to switch from CPU to GPU are not enabled when using GPUmatrix with TensorFlow for this precise reason. To install the GPU version, it is not necessary to specify the version since [if it detects that the CUDA dependencies are met]{.underline}, it will automatically install using the GPU mode. If you want to install the CPU version, you need to specify it as follows:
+The installation of TensorFlow allows the selection to install the GPU,
+CPU, or both versions (in Windows the GPU version is no longer supported).
+This will depend on the version of TensorFlow
+that we install with the `install_tensorflow()` function. The mode in
+which the tensors are created using GPUmatrix, if we choose to use
+TensorFlow, will depend on the installation mode. The options to switch
+from CPU to GPU are not enabled when using GPUmatrix with TensorFlow for
+this precise reason. To install the GPU version, it is not necessary to
+specify the version since <u>if it detects that the CUDA dependencies
+are met</u>, it will automatically install using the GPU mode. If you
+want to install the CPU version, you need to specify it as follows:
 
 `install_tensorflow(version="nightly-cpu")`
 
-```{r, eval=F}
+``` r
 install.packages("tensorflow")
 library(tensorflow)
 install_tensorflow(version = "nightly-gpu")
@@ -64,10 +84,11 @@ install_tensorflow(version = "nightly-gpu")
 
 -   **MUST INSTALL:**
 
-    -   CUDA Toolkit 11.2. Link [here](https://developer.nvidia.com/cuda-11.3.0-download-archive).
+    -   Before installing tensorflow is **required for GPU computing** to install CUDA and cuDNN. Links
+        for them and instructions for intallation are in the tensorflow documentation.
+### For Apple Silicon
 
-    -   cuDNN 8.1 . Link [here](https://docs.nvidia.com/deeplearning/cudnn/archives/cudnn-840/install-guide/index.html).
-
+Great news! No additional software required to work on Apple Silicon (either the CPU or the GPU).
 ## 0.2 GPUmatrix installation
 
 [Once the dependencies for Torch or TensorFlow are installed]{.underline}, the GPUmatrix package, being a package hosted on CRAN, can be easily installed using:
