@@ -44,7 +44,7 @@ installation instructions. In both cases, it is necessary to have an
 NVIDIA® GPU card with the latest drivers installed in order to use the
 packages, as well as a version of Python 3. The NVIDIA card must be
 compatible; please see the list of capable cards
-[here](https://developer.nvidia.com/cuda-gpus#compute). If there is no
+[here](https://developer.nvidia.com/cuda/gpus#compute). If there is no
 compatible graphics card or not graphic card at all, you can still
 install tensorFlow and torch, but only with the CPU version, which means
 that GPUmatrix will only be able to run in CPU mode.
