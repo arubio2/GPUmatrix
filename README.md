@@ -303,7 +303,7 @@ Gm
     
 ## 1.2 Using GPUMatrix on Apple Silicon
 
-The GPUmatrix package also supports Apple Silicon devices, allowing GPU operations to work seamlessly. By using the `device = "mds"` option in most functions, users can leverage the GPU on Apple Silicon machines out of the box. This ensures optimal performance on devices equipped with the M1 or M2 chips.
+The GPUmatrix package also supports Apple Silicon devices, allowing GPU operations to work seamlessly. By using the `device = "mds"` option in most functions, users can leverage the GPU on Apple Silicon machines out of the box. This ensures optimal performance on devices equipped with the Apple Silicon Mxx family. In these GPUs, float64 is not available.
 
 ``` r
 if (installTorch()) {
