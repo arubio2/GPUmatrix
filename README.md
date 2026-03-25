@@ -99,7 +99,7 @@ GPUmatrix package, being a package hosted on CRAN, can be easily
 installed using:
 
 ``` r
-install.packages("GPUmarix")
+install.packages("GPUmatrix")
 ```
 
 Alternatively, it is possible to install the package from GitHub ot get
